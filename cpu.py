@@ -252,3 +252,5 @@ class CPU:
             instruction = self.ram[self.pc]
             if instruction in self.branch_table:
                 self.branch_table[instruction]()
+            else:
+                sys.exit(1)
